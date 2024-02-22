@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 Forbidden</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body style="background-image: url('/static/sign/images/back2.jpg'); background-size: cover;">
+    <div class="container">
+        <h1>403 Forbidden</h1>
+        <p>Вы создали максимально разрешенное количество постов за 1 день.</p>
+        <p>Чтобы увеличить это количество, обратитесь к администратору.</p>
+    
+
+    <p id="countdown">Вы будете перенаправлены обратно через <span id="seconds">5</span> секунд</p>
+    <script>
+        var secondsLeft = 5;
+        var countdownElement = document.getElementById('seconds');
+
+        function countdown() {
+            if (secondsLeft === 0) {
+                window.location.href = "{% url 'news_list' %}";
+            } else {
+                countdownElement.textContent = secondsLeft;
+                secondsLeft--;
+                setTimeout(countdown, 1000);
+            }
+        }
+
+        countdown();
+    </script>
+</div>
+</body>
+</html>
