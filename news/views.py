@@ -1,5 +1,5 @@
-from datetime import timezone
-
+from datetime import *
+from django.utils import timezone
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django import forms
@@ -16,6 +16,7 @@ from .filters import NewsFilter
 from .forms import PostForm
 from .exceptions import DailyPostLimitExceeded
 from .mixins import AuthCheckMixin
+
 
 
 def daily_post_limit_exceeded(request, exception=None):

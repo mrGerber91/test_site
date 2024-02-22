@@ -1,8 +1,11 @@
-from django.db import models
-from django.contrib.auth.models import User
 import django_filters
-from django.utils import timezone
+import redirect
+from django.contrib.auth.models import User
+from django.db import models
 from django.urls import reverse
+from datetime import *
+from django.utils import timezone
+
 
 
 class UserDailyRecord(models.Model):

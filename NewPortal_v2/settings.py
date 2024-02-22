@@ -125,8 +125,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-CSRF_TRUSTED_ORIGINS = ['https://2555649-yo82697.twc1.net']
-CORS_ALLOWED_ORIGINS = ['https://2555649-yo82697.twc1.net']
+CSRF_TRUSTED_ORIGINS = ['http://mrGerber91-test-site-9dfe.twc1.net']
+CORS_ALLOWED_ORIGINS = ['http://mrGerber91-test-site-9dfe.twc1.net']
 
 SITE_ID = 1
 
