@@ -7,7 +7,6 @@ from botocore.client import Config
 
 load_dotenv()
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-o+(7^na(9!jwfi9ch6#8%7zfnu-q+1ao^yjp!cw%+whbc*7c2o'
@@ -168,9 +167,9 @@ BUCKET = 'a43db249-afcba5da-f823-48df-ae33-bb246aacb9e9'
 FILENAME = 'sample.txt'
 
 s3 = boto3.client(
-        's3',
-        endpoint_url='https://s3.timeweb.cloud',
-        region_name='ru-1',
-        aws_access_key_id='PVLTOFQ8MRXLF05LLMEM ',
-        aws_secret_access_key='8mnrUcoDV5YF7Z0KQD3WI2TeCxjCx0gWEr0DtLDz',
-    )
+    's3',
+    endpoint_url='https://s3.timeweb.cloud',
+    region_name='ru-1',
+    aws_access_key_id='PVLTOFQ8MRXLF05LLMEM ',
+    aws_secret_access_key='8mnrUcoDV5YF7Z0KQD3WI2TeCxjCx0gWEr0DtLDz',
+)
